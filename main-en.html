@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Home Page| Crypto Trackify</title>
+    <link rel="icon" href="images/logo.ico" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <a href="#">
+          <img src="images/logo.jpg" />
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li class="link"><a href="#home">Home</a></li>
+        <li id="link2" class="link"><a href="#shortcuts">Shortcuts</a></li>
+        <li id="link3" class="link"><a href="#about">About</a></li>
+      </ul>
+      <button class="btn">
+        <a href="crypto.html"><h4>Track Cypto</h4></a>
+      </button>
+      <button class="btn">
+        <a href="main-ro.html"><h4>RO</h4></a>
+      </button>
+    </nav>
+
+    <header id="home" class="container">
+      <div class="content">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <h1>Hi, we are <span>Crypto Trackify</span>, Web Developers.</h1>
+        <p>
+          We started this project with a simple idea to help others track all
+          crytpo in one place with price changing percent every minute and with
+          market cap value to make for yourself a simple idea in which crypto
+          you should invest.
+        </p>
+      </div>
+      <div class="image">
+        <img src="images/header.JPG" />
+      </div>
+    </header>
+    <section id="shortcuts" class="container">
+      <h2 class="header">SHORTCUTS</h2>
+      <p class="sub-header">
+        This part of our project is dedicated for shortcuts to our github project and for an external 
+        website where you cand check the crypto charts for every crypto in real time.
+      </p>
+      <div class="pricing">
+        <div class="card">
+          <div class="content">
+            <h4>Github Project</h4>
+            <h3>👾</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              README.md file with screenshots and about section
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Structuring the source code
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Well structured ideas
+            </p>
+          </div>
+          <button class="btn">Enter Now</button>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h4>Crypto Chart</h4>
+            <h3>📈</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Statistics with real time chart
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Highlighted chart when prices go up or down
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Spot investment opportunities
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Graphical representations of historical price, volumes, and time intervals
+            </p>
+          </div>
+          <button class="btn"><a href="chart.html">Redirect me</a></button>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h4>Crypto News</h4>
+            <h3>📰</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Stay updated with the news from the crypto world
+            </p>
+          </div>
+          <button class="btn"><a href="https://www.coindesk.com">Enter Now</a></button>
+        </div>
+      
+    </section>
+
+    <footer id="about" class="container">
+      <span class="blur"></span>
+      <span class="blur"></span>
+      <div class="column">
+        <div class="logo">
+          <img src="images/logo.jpg" />
+        </div>
+        <p>We take care to track for you, Crypto Trackify!</p>
+        <div class="socials">
+          <a href="#"><i class="ri-youtube-line"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-twitter-line"></i></a>
+        </div>
+      </div>
+      <div class="column">
+        <h4>About Us</h4>
+        <a href="#">Blogs</a>
+        <a href="#">Channels</a>
+        <a href="#">Sponsors</a>
+      </div>
+      <div class="column">
+        <h4>Contact</h4>
+        <a href="#">Contact Us</a>
+        <a href="pp.html">Privicy Policy</a>
+        <a href="https://www.termsandconditionsgenerator.com/live.php?token=Sdugql9zHHmvK8zSLysSq3p2nwOX7mLK">
+          Terms & Conditions</a>
+          <br>
+        <button class="btn"><a href="login-en.html">Log out</a></button>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      Copyright © 2024 Crypto Trackify. All rights reserved.
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+      window.addEventListener('mouseover', initLandbot, { once: true });
+      window.addEventListener('touchstart', initLandbot, { once: true });
+      var myLandbot;
+      function initLandbot() {
+        if (!myLandbot) {
+          var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+          s.addEventListener('load', function() {
+            var myLandbot = new Landbot.Livechat({
+              configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2217874-MXGL1MRNQ7OT0CWV/index.json',
+            });
+          });
+          s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <title>Pagina de Autentificare | Crypto Trackify</title>
+    <link rel="icon" href="images/logo.ico" />
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form>
+          <h1>Creează un Cont</h1>
+          <button><a href="login-en.html">EN</a></button>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+          <span>sau folosește adresa ta de email pentru înregistrare</span>
+          <input type="text" placeholder="Nume" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Parolă" />
+          <button><a href="main-ro.html">Înregistrare</a></button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form>
+          <h1>Autentificare</h1>
+          <button><a href="login-en.html">EN</a></button>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+          <span>sau folosește adresa ta de email și parola</span>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Parolă" />
+          <a href="#">Ai uitat parola?</a>
+          <button><a href="main-ro.html">Autentificare</a></button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Bine ai revenit!</h1>
+            <p>
+              Introdu datele tale personale pentru a putea accesa propriul tau
+              tracker asupra cryptomonedelor.
+            </p>
+            <button class="hidden" id="login">Autentificare</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Bun venit, crypto-trackifyer!</h1>
+            <p>
+              Înregistrează-te cu datele tale personale pentru a putea accesa
+              propriul tau tracker asupra cryptomonedelor.
+            </p>
+            <button class="hidden" id="register">Înregistrare</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

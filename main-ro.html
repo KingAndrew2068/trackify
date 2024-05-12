@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Pagina Principală | Crypto Trackify</title>
+    <link rel="icon" href="images/logo.ico" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <a href="#">
+          <img src="images/logo.jpg" />
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li class="link"><a href="#home">Acasă</a></li>
+        <li id="link2" class="link"><a href="#shortcuts">Scurtaturi</a></li>
+        <li id="link3" class="link"><a href="#about">Despre</a></li>
+      </ul>
+      <button class="btn">
+        <a href="crypto.html"><h4>Urmărește Crypto</h4></a>
+      </button>
+      <button class="btn">
+        <a href="main-en.html"><h4>EN</h4></a>
+      </button>
+    </nav>
+
+    <header id="home" class="container">
+      <div class="content">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <h1>
+          Bună, noi suntem <span>Crypto Trackify</span>, Dezvoltatori Web!
+        </h1>
+        <p>
+          Am început acest proiect cu o idee simplă de a ii ajuta pe alții să
+          urmărească toate cryptomonedele într-unul singur loc cu valoarea
+          cryptomonedelor care schimbă procentul în fiecare minut și cu valoarea
+          capitalizării pieței realizand pentru tine idee simplă în ce cripto ar
+          trebui să investești.
+        </p>
+      </div>
+      <div class="image">
+        <img src="images/header.JPG" />
+      </div>
+    </header>
+    <section id= "shortcuts" class="container">
+      <h2 class="header">COMENZI RAPIDE</h2>
+      <p class="sub-header">
+        Această parte a proiectului nostru este dedicată comenzilor rapide către proiectul nostru GitHub și către un site web extern unde puteți verifica graficele cripto pentru fiecare cripto în timp real.
+      </p>
+      <div class="pricing">
+        <div class="card">
+          <div class="content">
+            <h4>Proiect GitHub</h4>
+            <h3>👾</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Fișier README.md cu capturi de ecran și secțiune despre proiect
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Structurarea codului sursă
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Idei bine structurate
+            </p>
+          </div>
+          <button class="btn">Intră acum</button>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h4>Grafic pentru criptomonede</h4>
+            <h3>📈</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Statistici cu grafic în timp real
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Evidențierea graficului când prețurile cresc sau scad
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Identificarea oportunităților de investiții
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Reprezentări grafice ale prețului istoric, volumelor și intervalelor de timp
+            </p>
+          </div>
+          <button class="btn"><a href="chart.html">Redirecționează-mă</a></button>
+        </div>
+          <div class="card">
+            <div class="content">
+              <h4>Stiri despre crypto</h4>
+              <h3>📰</h3>
+              <p>
+                <i class="ri-checkbox-circle-line"></i>
+                Stai conectat cu noi informatii despre lumea criptomonedelor
+              </p>
+            </div>
+            <button class="btn"><a href="https://www.coindesk.com">Intra acum</a></button>
+          </div>
+    </section>
+
+
+    <footer id="about" class="container">
+      <span class="blur"></span>
+      <span class="blur"></span>
+      <div class="column">
+        <div class="logo">
+          <img src="images/logo.jpg" />
+        </div>
+        <p>Avem grijă să urmărim pentru tine, Crytpo Trackify!</p>
+        <div class="socials">
+          <a href="#"><i class="ri-youtube-line"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-twitter-line"></i></a>
+        </div>
+      </div>
+      <div class="column">
+        <h4>Despre Noi</h4>
+        <a href="#">Bloguri</a>
+        <a href="#">Canale</a>
+        <a href="">Sponsori</a>
+      </div>
+      <div class="column">
+        <h4>Contact</h4>
+        <a href="#">Contactează-ne</a>
+        <a href="pp.html">Politica de Confidențialitate</a>
+        <a href="https://www.termsandconditionsgenerator.com/live.php?token=Sdugql9zHHmvK8zSLysSq3p2nwOX7mLK">
+          Termeni și Condiții</a>
+          <br>
+        <button class="btn"><a href="login-ro.html">Iesi din cont</a></button>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      Drept de autor © 2024 Crypto Trackify. Toate drepturile rezervate.
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+      window.addEventListener('mouseover', initLandbot, { once: true });
+      window.addEventListener('touchstart', initLandbot, { once: true });
+      var myLandbot;
+      function initLandbot() {
+        if (!myLandbot) {
+          var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+          s.addEventListener('load', function() {
+            var myLandbot = new Landbot.Livechat({
+              configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2217874-MXGL1MRNQ7OT0CWV/index.json',
+            });
+          });
+          s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+      </script>
+  </body>
+</html>
