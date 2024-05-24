@@ -8,10 +8,30 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
     />
     <link rel="stylesheet" href="main.css" />
-    <title>Home Page| Crypto Trackify</title>
+    <title>Home Page | Crypto Trackify</title>
     <link rel="icon" href="images/logo.ico" />
-  </head>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "F12") {
+          event.preventDefault();
+        }
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          (event.key === "I" || event.key === "C" || event.key === "J")
+        ) {
+          event.preventDefault();
+        }
+        if (event.ctrlKey && event.key === "U") {
+          event.preventDefault();
+        }
+      });
 
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+      });
+    </script>
+  </head>
   <body>
     <nav>
       <div class="nav-logo">
@@ -24,12 +44,10 @@
         <li class="link"><a href="#home">Home</a></li>
         <li id="link2" class="link"><a href="#shortcuts">Shortcuts</a></li>
         <li id="link3" class="link"><a href="#about">About</a></li>
+        <li id="link4" class="link"><a href="crypto.html">Track Crypto</a></li>
       </ul>
       <button class="btn">
-        <a href="crypto.html"><h4>Track Cypto</h4></a>
-      </button>
-      <button class="btn">
-        <a href="main-ro.html"><h4>RO</h4></a>
+        <a href="main-ro.html" style="color: #ffffff"><h4>RO</h4></a>
       </button>
     </nav>
 
@@ -40,25 +58,26 @@
         <h1>Hi, we are <span>Crypto Trackify</span>, Web Developers.</h1>
         <p>
           We started this project with a simple idea to help others track all
-          crytpo in one place with price changing percent every minute and with
+          crypto in one place with price changing percent every minute and with
           market cap value to make for yourself a simple idea in which crypto
           you should invest.
         </p>
       </div>
       <div class="image">
-        <img src="images/header.JPG" />
+        <img src="images/header.jpg" />
       </div>
     </header>
     <section id="shortcuts" class="container">
       <h2 class="header">SHORTCUTS</h2>
       <p class="sub-header">
-        This part of our project is dedicated for shortcuts to our github project and for an external 
-        website where you cand check the crypto charts for every crypto in real time.
+        This part of our project is dedicated for shortcuts to our GitHub
+        project and for an external website where you can check the crypto
+        charts for every crypto in real time.
       </p>
-      <div class="pricing">
+      <div class="carduri">
         <div class="card">
           <div class="content">
-            <h4>Github Project</h4>
+            <h4>GitHub Project</h4>
             <h3>👾</h3>
             <p>
               <i class="ri-checkbox-circle-line"></i>
@@ -70,10 +89,16 @@
             </p>
             <p>
               <i class="ri-checkbox-circle-line"></i>
-              Well structured ideas
+              Well-structured ideas
             </p>
           </div>
-          <button class="btn">Enter Now</button>
+          <button class="btn">
+            <a
+              href="https://github.com/KingAndrew2068/trackify"
+              style="color: #ffffff"
+              >Enter Now</a
+            >
+          </button>
         </div>
         <div class="card">
           <div class="content">
@@ -81,7 +106,7 @@
             <h3>📈</h3>
             <p>
               <i class="ri-checkbox-circle-line"></i>
-              Statistics with real time chart
+              Statistics with real-time chart
             </p>
             <p>
               <i class="ri-checkbox-circle-line"></i>
@@ -93,10 +118,13 @@
             </p>
             <p>
               <i class="ri-checkbox-circle-line"></i>
-              Graphical representations of historical price, volumes, and time intervals
+              Graphical representations of historical price, volumes, and time
+              intervals
             </p>
           </div>
-          <button class="btn"><a href="chart.html">Redirect me</a></button>
+          <button class="btn">
+            <a href="chart.html" style="color: #ffffff">Redirect me</a>
+          </button>
         </div>
         <div class="card">
           <div class="content">
@@ -107,9 +135,11 @@
               Stay updated with the news from the crypto world
             </p>
           </div>
-          <button class="btn"><a href="https://www.coindesk.com">Enter Now</a></button>
+          <button class="btn">
+            <a href="https://crypto.news" style="color: #ffffff">Enter Now</a>
+          </button>
         </div>
-      
+      </div>
     </section>
 
     <footer id="about" class="container">
@@ -121,25 +151,26 @@
         </div>
         <p>We take care to track for you, Crypto Trackify!</p>
         <div class="socials">
-          <a href="#"><i class="ri-youtube-line"></i></a>
-          <a href="#"><i class="ri-instagram-line"></i></a>
-          <a href="#"><i class="ri-twitter-line"></i></a>
+          <a href="https://youtube.com"><i class="ri-youtube-line"></i></a>
+          <a href="https://instagram.com"><i class="ri-instagram-line"></i></a>
+          <a href="https://x.com"><i class="ri-twitter-line"></i></a>
         </div>
       </div>
       <div class="column">
         <h4>About Us</h4>
-        <a href="#">Blogs</a>
-        <a href="#">Channels</a>
-        <a href="#">Sponsors</a>
+        <a href="https://github.com/KingAndrew2068/trackify">Blogs</a>
+        <a href="https://github.com/KingAndrew2068/trackify">Channels</a>
+        <a href="documentatie.pdf">Documentation</a>
       </div>
       <div class="column">
         <h4>Contact</h4>
-        <a href="#">Contact Us</a>
-        <a href="pp.html">Privicy Policy</a>
-        <a href="https://www.termsandconditionsgenerator.com/live.php?token=Sdugql9zHHmvK8zSLysSq3p2nwOX7mLK">
-          Terms & Conditions</a>
-          <br>
-        <button class="btn"><a href="login-en.html">Log out</a></button>
+        <a href="https://github.com/KingAndrew2068/trackify">Contact Us</a>
+        <a href="pp.html">Privacy Policy</a>
+        <a href="tc.html">Terms & Conditions</a>
+        <br />
+        <button class="btn">
+          <a href="index.html" style="color: #ffffff">Log out</a>
+        </button>
       </div>
     </footer>
 
@@ -149,22 +180,25 @@
 
     <script src="main.js"></script>
     <script>
-      window.addEventListener('mouseover', initLandbot, { once: true });
-      window.addEventListener('touchstart', initLandbot, { once: true });
+      window.addEventListener("mouseover", initLandbot, { once: true });
+      window.addEventListener("touchstart", initLandbot, { once: true });
       var myLandbot;
       function initLandbot() {
         if (!myLandbot) {
-          var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
-          s.addEventListener('load', function() {
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          s.addEventListener("load", function () {
             var myLandbot = new Landbot.Livechat({
-              configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2217874-MXGL1MRNQ7OT0CWV/index.json',
+              configUrl:
+                "https://storage.googleapis.com/landbot.online/v3/H-2217874-MXGL1MRNQ7OT0CWV/index.json",
             });
           });
-          s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-          var x = document.getElementsByTagName('script')[0];
+          s.src = "https://cdn.landbot.io/landbot-3/landbot-3.0.0.js";
+          var x = document.getElementsByTagName("script")[0];
           x.parentNode.insertBefore(s, x);
         }
       }
-      </script>
+    </script>
   </body>
 </html>

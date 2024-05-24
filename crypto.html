@@ -3,25 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cryptocurrency Tracker| Crypto Trackify</title>
+    <title>Cryptocurrency Tracker | Crypto Trackify</title>
     <link rel="icon" href="images/logo.ico" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="crypto.css" />
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "F12") {
+          event.preventDefault();
+        }
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          (event.key === "I" || event.key === "C" || event.key === "J")
+        ) {
+          event.preventDefault();
+        }
+        if (event.ctrlKey && event.key === "U") {
+          event.preventDefault();
+        }
+      });
+
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+      });
+    </script>
   </head>
   <body>
+    <script>
+      window.addEventListener("mouseover", initLandbot, { once: true });
+      window.addEventListener("touchstart", initLandbot, { once: true });
+      var myLandbot;
+      function initLandbot() {
+        if (!myLandbot) {
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          s.addEventListener("load", function () {
+            var myLandbot = new Landbot.Livechat({
+              configUrl:
+                "https://storage.googleapis.com/landbot.online/v3/H-2217874-MXGL1MRNQ7OT0CWV/index.json",
+            });
+          });
+          s.src = "https://cdn.landbot.io/landbot-3/landbot-3.0.0.js";
+          var x = document.getElementsByTagName("script")[0];
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+    </script>
     <header>
       <img src="images/logo.jpg" alt="Logo" />
       <h1>Cryptocurrency Tracker</h1>
-
-      <button class="btn">
-        <a href="chart.html"><h4>Chart</h4></a>
-      </button>
-      <button class="btn">
-        <a href="main-en.html"><h4>Home</h4></a>
-      </button>
+      <ul class="nav-links">
+        <li id="link1"class="link"><a href="main-en.html">Home</a></li>
+        <li id="link2" class="link"><a href="chart.html">Chart</a></li>
+      </ul>
     </header>
     <div class="container">
       <div class="input-group mb-4">

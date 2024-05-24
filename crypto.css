@@ -1,39 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 body {
-  background-image: url("images/image.jpg"); /* Sets the background image of the body */
+  background-image: url("images/image.jpg");
+  font-family:'Poppins';
 }
+
 h5 {
   text-align: center;
   color: #ffffff;
   font-size: large;
 }
+
 h1 {
-  color: #343a40; /* Sets the color of h1 elements */
-  text-align: center; /* Centers all h1 elements */
+  color: #343a40;
+  text-align: center;
 }
 
-.btn {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #1d4ed8;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-left: auto; /* Adjusted margin-left to move the buttons to the right */
-}
-.btn:hover {
-  background-color: #1e40af;
-}
 header img {
   width: 150px;
-  margin-right: 100px;
+  margin-right: 20px; /* Adjust the margin as needed */
 }
+
 nav {
   max-width: 1200px;
   margin: auto;
   padding: 2rem 1rem;
   display: flex;
-  align-items: right;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
   background-color: purple;
@@ -48,155 +40,163 @@ nav {
   display: flex;
   align-items: center;
   gap: 3rem;
+  margin-left: auto; /* Aligns the nav-links to the right */
 }
-.container {
-  margin-top: 20px;
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #ffffff;
+  text-decoration: none; /* Ensure links are not underlined by default */
 }
-footer {
-  margin-top: 50px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #a59019;
+  transition: all 0.3s ease;
 }
-footer img {
-  width: 150px;
-  margin-right: 70px;
+
+.link a:hover {
+  text-decoration: none; /* Ensure links are not underlined on hover */
 }
-.container button {
-  background-image: url("image.jpg");
-  background-color: #512da8;
-  color: #fff;
-  font-size: 12px;
-  padding: 10px 45px;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin-top: 10px;
-  cursor: pointer;
+
+.link a:hover::after {
+  width: 70%;
 }
 
 .container {
-  max-width: 800px; /* Sets the maximum width of the container */
-  margin: 0 auto; /* Centers the container horizontally */
-  flex: 1; /* Allows the container to grow and fill available space */
+  margin-top: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex: 1;
 }
+
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 20px;
-  background-color: #07427c; /* Sets the background color of the footer */
-  color: #ffffff; /* Sets the text color of the footer */
-  text-align: center; /* Aligns text to the center in the footer */
-  padding: 20px; /* Increase the padding to increase the height of the footer */
-  margin-top: auto; /* Pushes footer to the bottom of the container */
+  background-color: #18181b;
+  color: #ffffff;
 }
 
-h1 {
-  color: #343a40; /* Sets the color of h1 elements */
+header h1 {
+  flex: 1;
+  color: #ffffff;
+  text-align: center;
+  margin: 0; /* Remove default margin to better center align */
 }
 
 .input-group {
-  margin-bottom: 20px; /* Adds margin to the bottom of input groups */
+  margin-bottom: 20px;
 }
 
 .table {
-  width: 100%; /* Sets the table width to 100% of its container */
-  border-collapse: collapse; /* Collapses the borders of table cells */
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .table th,
 .table td {
-  text-align: center; /* Centers the text in table header and data cells */
-  white-space: nowrap; /* Prevents wrapping of text in table cells */
-  overflow: hidden; /* Hides any overflowing content in table cells */
-  text-overflow: ellipsis; /* Displays an ellipsis (...) for overflowed text */
-  padding: 8px; /* Adds padding inside table cells */
-  border-bottom: 1px solid #ddd; /* Adds a bottom border to table cells */
-  border-left: none; /* Removes the left border of table cells */
-  border-right: none; /* Removes the right border of table cells */
-  color: #48484b; /* Sets the text color for table content */
-  background-color: #e5e5eb; /* Sets the background color for table content */
-  transition: background-color 0.3s; /* Smooth transition for background color */
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  color: #48484b;
+  background-color: #e5e5eb;
+  transition: background-color 0.3s;
 }
 
 .table th {
-  background-color: #07427c; /* Sets the background color for table header cells */
-  color: #ffffff; /* Sets the text color for table header cells */
+  background-color: #07427c;
+  color: #ffffff;
 }
 
 .table th:first-child,
 .table td:first-child {
-  font-weight: bold; /* Sets the font weight to bold for the first column */
+  font-weight: bold;
 }
 
 .table th:not(:first-child),
 .table td:not(:first-child) {
-  font-weight: normal; /* Sets the font weight to normal for columns other than the first */
+  font-weight: normal;
 }
 
 .table tbody tr:hover td {
-  background-color: #7e858d; /* Sets the background color on row hover */
-  cursor: pointer; /* Changes cursor to pointer on row hover */
+  background-color: #7e858d;
+  cursor: pointer;
 }
 
 .table tbody tr:hover th {
-  background-color: #7e858d; /* Sets the background color on row hover for header cells */
+  background-color: #7e858d;
 }
 
 .table tbody tr:hover td:hover {
-  background-color: #7e858d; /* Sets the background color on cell hover */
+  background-color: #7e858d;
 }
 
 .crypto-logo {
-  width: 30px; /* Sets the width of cryptocurrency logos */
-  height: 30px; /* Sets the height of cryptocurrency logos */
+  width: 30px;
+  height: 30px;
 }
 
 .btn-primary {
-  background-color: #07427c; /* Sets the background color of primary buttons */
-  border-color: #6c757d; /* Sets the border color of primary buttons */
+  background-color: #07427c;
+  border-color: #6c757d;
 }
 
 .btn-primary:hover {
-  background-color: #5a6268; /* Sets the background color of primary buttons on hover */
-  border-color: #5a6268; /* Sets the border color of primary buttons on hover */
+  background-color: #5a6268;
+  border-color: #5a6268;
 }
 
 footer {
-  background-color: #07427c; /* Sets the background color of the footer */
-  color: #ffffff; /* Sets the text color of the footer */
-  text-align: center; /* Aligns text to the center in the footer */
-  padding: 20px; /* Increase the padding to increase the height of the footer */
-  margin-top: auto; /* Pushes footer to the bottom of the container */
-  margin-top: 50px;
+  background-color: #18181b;
+  color: #ffffff;
   text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header h1 {
-  color: #ffffff; /* Sets the color of h1 elements in the header */
+footer img {
+  width: 150px;
+  margin-right: 70px;
 }
 
 @media only screen and (max-width: 600px) {
   .table th,
   .table td {
-    font-size: 12px; /* Sets font size for table cells on small screens */
-    padding: 5px; /* Adjusts padding for table cells on small screens */
+    font-size: 12px;
+    padding: 5px;
   }
 
   header h1 {
-    display: block; /* Displays h1 elements as block-level elements */
-    height: 15px; /* Sets the height of h1 elements */
-    position: absolute; /* Positions h1 elements absolutely */
-    right: 17px; /* Aligns h1 elements to the right */
-    top: 1px; /* Aligns h1 elements to the top */
-    text-rendering: geometricPrecision; /* Renders text with geometric precision */
-    z-index: 2147483646; /* Sets the z-index of h1 elements */
+    display: block;
+    height: 15px;
+    position: absolute;
+    right: 17px;
+    top: 1px;
+    text-rendering: geometricPrecision;
+    z-index: 2147483646;
     margin: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
   }
 }

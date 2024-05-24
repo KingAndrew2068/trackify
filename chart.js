@@ -21,3 +21,24 @@ new TradingView.widget({
   popup_width: "1000",
   popup_height: "650",
 });
+document.addEventListener("keydown", function (event) {
+  if (event.key === "F12") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.shiftKey && event.key === "I") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.shiftKey && event.key === "C") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.shiftKey && event.key === "J") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.key === "U") {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});

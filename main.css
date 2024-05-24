@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +22,7 @@
 h4 {
   color: #fff;
 }
+
 img {
   width: 100%;
   display: flex;
@@ -24,6 +36,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #18181b;
   animation: fade-up 0.75s;
+  scrollbar-width: none;
 }
 
 nav {
@@ -60,8 +73,21 @@ nav {
   width: 0;
   bottom: 0;
   left: 0;
-  background-color: #1d4ed8;
+  background-color: #a59019;
   transition: all 0.3s ease;
+}
+* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+}
+
+/* Optional: Style the track and thumb */
+::-webkit-scrollbar-track {
+  background: transparent;  /* Optional: Style the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;  /* Optional: Style the thumb */
 }
 
 .link a:hover::after {
@@ -72,14 +98,14 @@ nav {
   padding: 1rem 2rem;
   font-size: 1rem;
   color: #fff;
-  background-color: #1d4ed8;
+  background-color: #a59019;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #1e40af;
+  background-color: #695b08;
 }
 
 .container {
@@ -90,7 +116,7 @@ nav {
 
 .blur {
   position: absolute;
-  box-shadow: 0 0 1000px 50px #1d4ed8;
+  box-shadow: 0 0 1000px 50px #a59019;
   z-index: -100;
 }
 
@@ -141,7 +167,7 @@ header .image::before {
   font-size: 38rem;
   font-weight: 400;
   line-height: 20rem;
-  color: #1d4ed8;
+  color: #a59019;
   opacity: 0.2;
   z-index: -100;
 }
@@ -217,14 +243,14 @@ section .header {
   color: #ccc;
 }
 
-.pricing {
+.carduri {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.pricing .card {
+.carduri .card {
   padding: 3rem 2rem;
   background-color: #27272a;
   display: flex;
@@ -234,24 +260,24 @@ section .header {
   transition: all 0.3s ease;
 }
 
-.pricing .card:hover {
+.carduri .card:hover {
   background-color: #323232;
   border-color: #fff;
 }
 
-.pricing .card .content {
+.carduri .card .content {
   flex: 1;
   margin-bottom: 2rem;
 }
 
-.pricing .card h4 {
+.carduri .card h4 {
   margin-bottom: 1rem;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-.pricing .card h3 {
+.carduri .card h3 {
   color: #fff;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
@@ -260,26 +286,26 @@ section .header {
   border-bottom: 2px dashed #fff;
 }
 
-.pricing .card p {
+.carduri .card p {
   color: #fff;
   margin-bottom: 0.75rem;
 }
 
-.pricing .card p i {
+.carduri .card p i {
   color: #ccc;
   font-size: 1.2rem;
   margin-right: 0.3rem;
 }
 
-.pricing .card button {
+.carduri .card button {
   color: #fff;
   background-color: transparent;
   border: 2px solid #fff;
 }
 
-.pricing .card button:hover {
-  background-color: #1e40af;
-  border-color: #1e40af;
+.carduri .card button:hover {
+  background-color: #a59019;
+  border-color: #cfc316;
 }
 
 footer {
@@ -315,9 +341,9 @@ footer .column .socials a {
 }
 
 footer .column .socials a:hover {
-  color: #fff;
-  background-color: #1d4ed8;
-  border-color: #1d4ed8;
+  color: #000;
+  background-color: #d6eb1b;
+  border-color: #cfc316;
 }
 
 footer .column h4 {
@@ -335,7 +361,7 @@ footer .column > a {
 }
 
 footer .column > a:hover {
-  color: #1d4ed8;
+  color: #d6eb1b;
 }
 
 .copyright {
@@ -346,22 +372,13 @@ footer .column > a:hover {
   font-size: 0.8rem;
   text-align: center;
 }
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
-}
-@media (width < 900px) {
+
+@media (max-width: 900px) {
   .nav-links {
     display: none;
   }
   header {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
   header .image {
     grid-area: 1/1/2/2;
@@ -369,7 +386,7 @@ footer .column > a:hover {
   .features {
     grid-template-columns: repeat(2, 1fr);
   }
-  .pricing {
+  .carduri {
     grid-template-columns: repeat(2, 1fr);
   }
   footer {
@@ -377,16 +394,16 @@ footer .column > a:hover {
   }
 }
 
-@media (width < 600px) {
+@media (max-width: 600px) {
   header .image::before {
     display: none;
   }
 
   .features {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 
-  .pricing {
+  .carduri {
     grid-template-columns: repeat(1, 1fr);
   }
 

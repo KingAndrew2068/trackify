@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="login.css" />
-    <title>Pagina de Autentificare | Crypto Trackify</title>
+    <title>Login Page | Crypto Trackify</title>
     <link rel="icon" href="images/logo.ico" />
     <script>
       document.addEventListener("keydown", function (event) {
@@ -35,9 +35,12 @@
   <body>
     <div class="container" id="container">
       <div class="form-container sign-up">
-        <form action="/main-ro.html" method="POST" data-netlify="true">
-          <h1>Creează un Cont</h1>
-          <button><a href="index.html" style="color: #ffffff">EN</a></button>
+
+        <form action="/main-en.html" method="POST" data-netlify="true">
+          <h1>Create Account</h1>
+          <button style="color: #fff !important">
+            <a href="login-ro.html" style="color: #ffffff">RO</a>
+          </button>
           <div class="social-icons">
             <a href="https://google.com" class="icon"
               ><i class="fa-brands fa-google-plus-g"></i
@@ -52,19 +55,35 @@
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
           </div>
-          <span>sau folosește adresa ta de email pentru înregistrare</span>
-          <input type="text" placeholder="Nume" />
+          <span>or use your email for registration</span>
+          <input type="text" placeholder="Name" />
           <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Parolă" />
-          <button>
-            <a href="main-ro.html" style="color: #ffffff">Înregistrare</a>
+          <input type="password" placeholder="Password" />
+          <button style="color: #fff !important">
+            <a href="main-en.html" style="color: #ffffff">Sign Up</a>
           </button>
         </form>
       </div>
       <div class="form-container sign-in">
-        <form action="/main-ro.html" method="POST" data-netlify="true">
-          <h1>Autentificare</h1>
-          <button><a href="index.html" style="color: #ffffff">EN</a></button>
+        <form action="/main-en.html" method="POST" data-netlify="true">
+          <h1>Sign In</h1>
+          <button
+            style="
+              color: white !important;
+              background-color: #cfc316;
+              font-size: 12px;
+              padding: 10px 45px;
+              border: 1px solid transparent;
+              border-radius: 8px;
+              font-weight: 600;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              margin-top: 10px;
+              cursor: pointer;
+            "
+          >
+            <a href="login-ro.html" style="color: #ffffff">RO</a>
+          </button>
           <div class="social-icons">
             <a href="https://google.com" class="icon"
               ><i class="fa-brands fa-google-plus-g"></i
@@ -79,37 +98,36 @@
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
           </div>
-          <span>sau folosește adresa ta de email și parola</span>
+          <span>or use your email password</span>
           <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Parolă" />
-          <a href="#">Ai uitat parola?</a>
-          <button>
-            <a href="main-ro.html" style="color: #ffffff">Autentificare</a>
+          <input type="password" placeholder="Password" />
+          <a href="#">Forget Your Password?</a>
+          <button style="color: #fff !important">
+            <a href="main-en.html" style="color: #ffffff">Sign In</a>
           </button>
         </form>
       </div>
       <div class="toggle-container">
         <div class="toggle">
           <div class="toggle-panel toggle-left">
-            <h1>Bine ai revenit!</h1>
+            <h1>Welcome Back!</h1>
             <p>
-              Introdu datele tale personale pentru a putea accesa propriul tău
-              tracker asupra cryptomonedelor.
+              Enter your personal details to access your personal crypto
+              tracker.
             </p>
-            <button class="hidden" id="login">Autentificare</button>
+            <button class="hidden" id="login">Sign In</button>
           </div>
           <div class="toggle-panel toggle-right">
-            <h1>Bun venit, crypto-trackifyer!</h1>
+            <h1>Hello, crypto-trackifyer!</h1>
             <p>
-              Înregistrează-te cu datele tale personale pentru a putea accesa
-              propriul tău tracker asupra cryptomonedelor.
+              Register with your personal details to access your personal crypto
+              tracker.
             </p>
-            <button class="hidden" id="register">Înregistrare</button>
+            <button class="hidden" id="register">Sign Up</button>
           </div>
         </div>
       </div>
     </div>
-
     <script src="login.js"></script>
   </body>
 </html>

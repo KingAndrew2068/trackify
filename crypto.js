@@ -1,4 +1,3 @@
-// Function to fetch cryptocurrency data from CoinRanking API
 async function fetchCryptoData() {
   try {
     const response = await fetch("https://api.coinranking.com/v2/coins");
@@ -10,24 +9,17 @@ async function fetchCryptoData() {
   }
 }
 
-// Function to add periods after every third digit in a number
 function addPeriods(number) {
-  // Convert the number to a string and split it by the period
   const parts = number.toString().split(".");
-  // Extract the integer part
   const integerPart = parts[0];
-  // Extract the decimal part and truncate it to the first 7 digits
   const decimalPart = parts[1] ? parts[1].slice(0, 7) : "";
-  // Add the period after every third digit in the integer part
   const formattedInteger = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  // Combine the formatted integer and decimal parts with a period
   const formattedNumber = decimalPart
     ? formattedInteger + "." + decimalPart
     : formattedInteger;
   return formattedNumber;
 }
 
-// Function to display cryptocurrency data in the table
 function displayCryptoData(coins) {
   const cryptoTable = document.getElementById("cryptoTable");
   cryptoTable.innerHTML = "";
@@ -38,24 +30,15 @@ function displayCryptoData(coins) {
 		<td><img src="${coin.iconUrl}" class="crypto-logo" alt="${coin.name}"></td>
 		<td>${coin.name}</td>
 		<td>${coin.symbol}</td>
-		<td>$${addPeriods(
-      coin.price
-    )}</td> <!-- Call addPeriods function here for price -->
-		<td>${addPeriods(
-      coin.change
-    )}%</td> <!-- Call addPeriods function here for change -->
-		<td>${addPeriods(
-      coin.volume ? coin.volume : "-"
-    )}</td> <!-- Call addPeriods function here for volume -->
-		<td>${addPeriods(
-      coin.marketCap ? coin.marketCap : "-"
-    )}</td> <!-- Call addPeriods function here for market cap -->
+		<td>$${addPeriods(coin.price)}</td>
+		<td>${addPeriods(coin.change)}%</td>
+		<td>${addPeriods(coin.volume ? coin.volume : "-")}</td>
+		<td>${addPeriods(coin.marketCap ? coin.marketCap : "-")}</td>
 		`;
     cryptoTable.appendChild(row);
   });
 }
 
-// Function to filter cryptocurrencies based on user input
 function filterCryptoData(coins, searchTerm) {
   searchTerm = searchTerm.toLowerCase();
 
@@ -68,7 +51,6 @@ function filterCryptoData(coins, searchTerm) {
   return filteredCoins;
 }
 
-// Function to handle search input
 function handleSearchInput() {
   const searchInput = document.getElementById("searchInput");
   const searchTerm = searchInput.value.trim();
@@ -79,15 +61,38 @@ function handleSearchInput() {
   });
 }
 
-// Function to initialize the app
 async function initializeApp() {
   const coins = await fetchCryptoData();
   displayCryptoData(coins);
 
-  // Add event listener to search input
   const searchInput = document.getElementById("searchInput");
   searchInput.addEventListener("input", handleSearchInput);
 }
 
-// Call initializeApp function when the DOM content is loaded
 document.addEventListener("DOMContentLoaded", initializeApp);
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "F12") {
+    event.preventDefault();
+  }
+
+  if (event.ctrlKey && event.shiftKey && event.key === "I") {
+    event.preventDefault();
+  }
+
+  if (event.ctrlKey && event.shiftKey && event.key === "C") {
+    event.preventDefault();
+  }
+
+  if (event.ctrlKey && event.shiftKey && event.key === "J") {
+    event.preventDefault();
+  }
+
+  if (event.ctrlKey && event.key === "U") {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
